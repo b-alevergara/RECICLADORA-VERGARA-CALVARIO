@@ -1,0 +1,105 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+.grid{
+    display: grid;
+    grid-template-areas: 
+    " header "
+    " seccionUno "
+    " seccionDos "
+    " seccionTres "
+    " seccionCuatro "
+    " footer ";
+    grid-template-columns: 100% ;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 1fr;
+}
+.logo img{
+    margin: 5px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    grid-area: header;
+}
+nav ul{
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 6em;
+    color: black;
+}
+a{
+    margin: 2rem;
+    text-decoration: none;
+    list-style-type: none;
+    color: black; 
+    text-transform: capitalize;
+}
+nav ul li{
+    font-size: large;
+}
+nav ul li:hover{
+    background-color: green;
+}
+.seccionUno{
+    grid-area: seccionUno ;
+    background-color: rgb(129, 253, 129);
+}
+.seccionDos{
+    grid-area: seccionDos ;
+    background-color: white;
+
+}
+.seccionTres{
+    grid-area: seccionTres ;
+    background-color: rgb(129, 253, 129);
+
+}
+.seccionCuatro{
+    grid-area: seccionCuatro ;
+    background-color: white;
+
+}
+.footer{
+    grid-area: footer;
+    display:inline;
+    padding: 3rem;
+    height: 10em;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    background-color: rgb(131, 149, 158);
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    font-weight: bolder;
+    font-size: medium;
+}
+h1{
+    display: flex;
+    color: black;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'IBM Plex Serif', serif;
+}
+h2{
+    display: flex;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-family: 'Playfair Display', serif;
+}
+h3{
+    display: flex;
+    text-transform: capitalize;
+    color: rgba(85, 79, 79, 0.89);
+    font-size: 9px;
+    font-family: 'IBM Plex Serif', serif;
+}
+p{
+    font-size: 5px;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;}
+    
