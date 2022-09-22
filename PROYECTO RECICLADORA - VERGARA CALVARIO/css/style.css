@@ -3,18 +3,6 @@
     box-sizing: border-box;
     font-size: 62.5%;
 }
-.grid{
-    display: grid;
-    grid-template-areas: 
-    " header "
-    " seccionUno "
-    " seccionDos "
-    " seccionTres "
-    " seccionCuatro "
-    " footer ";
-    grid-template-columns: 100% ;
-    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 1fr;
-}
 .logo img{
     margin: 5px;
     padding: 10px 0;
@@ -23,7 +11,6 @@
     justify-content: center;
 }
 .header{
-    grid-area: header;
 }
 nav ul{
     justify-content: center;
@@ -45,21 +32,17 @@ nav ul li:hover{
     background-color: green;
 }
 .seccionUno{
-    grid-area: seccionUno ;
     background-color: rgb(129, 253, 129);
 }
 .seccionDos{
-    grid-area: seccionDos ;
     background-color: white;
 
 }
 .seccionTres{
-    grid-area: seccionTres ;
     background-color: rgb(129, 253, 129);
 
 }
 .seccionCuatro{
-    grid-area: seccionCuatro ;
     background-color: white;
 
 }
@@ -74,9 +57,11 @@ nav ul li:hover{
     background-color: rgb(131, 149, 158);
     justify-content: center;
     align-items: center;
-    color: azure;
+}
+.contenidoFooter{
+    color: black;
     font-weight: bolder;
-    font-size: medium;
+    font-size: large;
 }
 h1{
     display: flex;
