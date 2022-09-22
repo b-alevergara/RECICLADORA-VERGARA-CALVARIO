@@ -1,11 +1,11 @@
-//objeto de los productos
+//objeto de productos
 const Productos = [
 {
     numero: 1,
     nombre: "Caucho granulado", 
     precio: "450",
     unidadDeMedida: "Kilo",
-    img: "./PROYECTO RECICLADORA - VERGARA CALVARIO/imagenes/CAUCHO GRANULADO.jpg"
+    img: './PROYECTO RECICLADORA - VERGARA CALVARIO/imagenes/CAUCHO GRANULADO.jpg'
     }, //no me esta tomando la ruta de las imagenes, corregirlo
 {
     numero: 2,
@@ -34,7 +34,7 @@ const contenedorProductos = document.getElementById("contenedorProductos");
 
 for (const producto of Productos) {
     let column = document.createElement("div");
-    column.className = "col-md-5 mt-4 ";
+    column.className = "col-md-8 mt-4 "; //quiero centrar estos elementos en la pagina
     column.numero = `columna-${producto.numero}`;
     column.innerHTML = `
         <div class="card">
@@ -42,6 +42,11 @@ for (const producto of Productos) {
                 <p class="card-text">Nombre: <b>${producto.nombre}</b></p>
                 <p class="card-text">Precio: <b>${producto.precio}</b></p>
                 <p class="card-text">Unidad de medida: <b>${producto.unidadDeMedida}</b></p>
+                <p class="card-img-top"> <b>${producto.img}</b></p>
             </div>
         </div>`;
 contenedorProductos.append(column);}
+
+//es necesario incorporarle un carrito de compras?
+
+//agregar mis operaciones del calculo total referente a la cantidad seleccionada
