@@ -3,8 +3,7 @@ function enviarFormulario(){
     const enviar=document.getElementById("botonEnviar")
     enviar.addEventListener("submit", (evento)=>{
         evento.preventDefault(); 
-        //agregarle elementos para prevent default
-
+        console.log('Enviado')
         class Persona {
             constructor(nombre, email, tema, comentarios) {
                 this.nombre = nombre;
@@ -46,10 +45,6 @@ function enviarFormulario(){
         }
     
 //los datos me gustaria enviarlos a mi correo electronico para contactar al cliente(creo que necesito backend para esto)
-
-
-
-
 }
 }
 
@@ -59,6 +54,5 @@ main()
 //puedo a;adir una tabla con los datos ingresados al html con inner html 
 //function tabla(){
     // nombre.innerHTML=`<h3>Datos ingresados</h3>
-    // <p><strong> Nombre: </strong> ${nombre}</p>`  y asi de cada elemento
-
+    // <p><strong> Nombre: </strong> ${nombre}</p>`  y asi de cada elemento min 15.32
 // }
