@@ -1,31 +1,64 @@
-//evento submit para mandar la info capturada del form
-//e inicio elementos
+//evento submit para mandar la info capturada del form e inicio de variables
 function enviarFormulario(){
     const enviar=document.getElementById("botonEnviar")
     enviar.addEventListener("submit", (evento)=>{
-        evento.preventDefault();
+        evento.preventDefault(); 
+        //agregarle elementos para prevent default
+
+        class Persona {
+            constructor(nombre, email, tema, comentarios) {
+                this.nombre = nombre;
+                this.email = email;
+                this.tema = tema;
+                this.comentarios = comentarios;
+            }
+        }            
     
-    let nombre=document.getElementById("capturaNombre").value;
-    let email=document.getElementById("capturaEmail").value;
-    let seleccion=document.getElementById("seleccionTema").value;
-    let comentarios=document.getElementById("comentarios").value;
+    nombre=document.getElementById("capturaNombre").value;
+    email=document.getElementById("capturaEmail").value;
+    seleccion=document.getElementById("seleccionTema").value;
+    comentarios=document.getElementById("comentarios").value;
     //un ciclo para validar que los campos son llenados correctamente
-    if(nombre==""){
-        alert("El nombre es un campo obligatorio.");
+        //revisar que se ejecuten correctamente
+        //CORREGIR
+
+    if(nombre==='' || email===''){  //revisar que estos criterios funcionen
+        alert("Asegurese que todos los campos han sido llenados correctamente.");
         document.getElementById("capturaNombre").focus();
     }else{
-        if(email==""){
-        alert("El e-mail es indispensable para comunicarnos con usted");
-        document.getElementById("capturaEmail").focus();
-    }else{
-        console.log(nombre +""+ email+""+seleccion+""+comentarios)
-        document.getElementById("capturaNombre").value=""
-        document.getElementById("capturaEmail").value=""
-        document.getElementById("seleccionTema").value=""
-        document.getElementById("comentarios").value=""
-        //para que vuelvan a iniciar el formulario
-        document.getElementById("capturaNombre").focus();
-    }}
-    })}
+    //imprimo en consola los campos que el usuario llena y despues los dejo en blanco para volver a iniciar el formulario
+        nuevaPersona= new Persona(capturaNombre,capturaEmail,capturaTema,capturaComentarios); //sin let deberia funcionar esta variable afuera de la funcion
+        console.log(nuevaPersona);
+        pushDatos()
+    
+            document.getElementById("capturaNombre").value=""
+            document.getElementById("capturaEmail").value=""
+            document.getElementById("seleccionTema").value=""
+            document.getElementById("comentarios").value=""
+        //probar si funciona el console log y si cambia los campos a blancos
+            document.getElementById("capturaNombre").focus();
+    }
+    //guardar los datos obtenidos en un array
+    let datos =[];
+    function pushDatos(){
+        datos.push(nuevaPersona);
+        console.log(datos);
+        }
+    
+//los datos me gustaria enviarlos a mi correo electronico para contactar al cliente(creo que necesito backend para esto)
+
+
+
+
+}
+}
+
 function main(){enviarFormulario();}
 main()
+
+//puedo a;adir una tabla con los datos ingresados al html con inner html 
+//function tabla(){
+    // nombre.innerHTML=`<h3>Datos ingresados</h3>
+    // <p><strong> Nombre: </strong> ${nombre}</p>`  y asi de cada elemento
+
+// }
