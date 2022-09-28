@@ -22,7 +22,7 @@ function enviarFormulario(){
     //un ciclo para validar que los campos son llenados correctamente
 
         //revisar que se ejecuten correctamente
-    if(nombre==='' || email===''){  //revisar que estos criterios funcionen
+    if(nombre==='' || email==='' || seleccion===''|| comentarios==='' ){  //revisar que estos criterios funcionen
         alert("Asegurese que todos los campos han sido llenados correctamente.");
         document.getElementById("capturaNombre").focus();
     }else{
@@ -35,7 +35,6 @@ function enviarFormulario(){
             document.getElementById("capturaEmail").value=""
             document.getElementById("seleccionTema").value=""
             document.getElementById("comentarios").value=""
-        //probar si funciona el console log y si cambia los campos a blancos
             document.getElementById("capturaNombre").focus();
     }
     //guardar los datos obtenidos en el array datos
@@ -51,8 +50,13 @@ function enviarFormulario(){
 function main(){enviarFormulario();}
 main()
 
+//almacenar en local storage los datos del array datos
+localStorage.setItem('contactoCliente', JSON.stringify(datos))
+let contactarCliente = JSON.parse(localStorage.getItem('contactarCliente'))
+
+
 //puedo a;adir una tabla con los datos ingresados al html con inner html 
 //function tabla(){
     // nombre.innerHTML=`<h3>Datos ingresados</h3>
-    // <p><strong> Nombre: </strong> ${nombre}</p>`  y asi de cada elemento min 15.32
+    // <p><strong> Nombre: </strong> ${nombre}</p>`  y asi de cada elemento
 // }

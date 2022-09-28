@@ -47,6 +47,7 @@ contenedorProductos.append(column);}
 
 //agregar mis operaciones del calculo total referente a la cantidad seleccionada (reduce)
 //puedo incorporar el reduce solo para mi console.log
-//pero necesitaria un boton en cada producto para que el usuario vaya seleccionando el producto (y cantidad) que quiere
+//poner un boton en cada producto para que el usuario vaya seleccionando el producto (y cantidad) que quiere
+//boton +1- 
 //y despues arrojarle el total de los articulos seleccionados
 //(tiene que funcionar para sumar y restar, en caso de que se eliminen productos)
