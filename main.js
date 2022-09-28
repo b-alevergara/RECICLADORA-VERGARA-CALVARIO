@@ -27,11 +27,11 @@ const Productos = [
     }
 ]
 
-const contenedorProductos = document.getElementById("contenedorProductos");
+const contenedorProductos = document.getElementById("contenedorProductos"); //el elemento esta en productos.html linea 52
 
 for (const producto of Productos) {
     let column = document.createElement("div");
-    column.className = "col-md-8 mt-4 "; //quiero centrar estos elementos en la pagina
+    column.className = "col-md-8 mt-4 "; 
     column.numero = `columna-${producto.numero}`;
     column.innerHTML = `
         <div class="card">
@@ -43,7 +43,10 @@ for (const producto of Productos) {
         </div>`;
 contenedorProductos.append(column);}
 
-//es necesario incorporarle un carrito de compras?
+
 
 //agregar mis operaciones del calculo total referente a la cantidad seleccionada (reduce)
 //puedo incorporar el reduce solo para mi console.log
+//pero necesitaria un boton en cada producto para que el usuario vaya seleccionando el producto (y cantidad) que quiere
+//y despues arrojarle el total de los articulos seleccionados
+//(tiene que funcionar para sumar y restar, en caso de que se eliminen productos)

@@ -1,7 +1,9 @@
 //evento submit para mandar la info capturada del form e inicio de variables
+let datos =[];
+
 function enviarFormulario(){
     const enviar=document.getElementById("botonEnviar")
-    enviar.addEventListener("submit", (evento)=>{
+    enviar.addEventListener("click", (evento)=>{
         evento.preventDefault(); 
         console.log('Enviado')
         class Persona {
@@ -13,20 +15,19 @@ function enviarFormulario(){
             }
         }            
     
-    nombre=document.getElementById("capturaNombre").value;
-    email=document.getElementById("capturaEmail").value;
-    seleccion=document.getElementById("seleccionTema").value;
-    comentarios=document.getElementById("comentarios").value;
+    let nombre=document.getElementById("capturaNombre").value;
+    let email=document.getElementById("capturaEmail").value;
+    let seleccion=document.getElementById("seleccionTema").value;
+    let comentarios=document.getElementById("comentarios").value;
     //un ciclo para validar que los campos son llenados correctamente
-        //revisar que se ejecuten correctamente
-        //CORREGIR
 
+        //revisar que se ejecuten correctamente
     if(nombre==='' || email===''){  //revisar que estos criterios funcionen
         alert("Asegurese que todos los campos han sido llenados correctamente.");
         document.getElementById("capturaNombre").focus();
     }else{
     //imprimo en consola los campos que el usuario llena y despues los dejo en blanco para volver a iniciar el formulario
-        nuevaPersona= new Persona(capturaNombre,capturaEmail,capturaTema,capturaComentarios); //sin let deberia funcionar esta variable afuera de la funcion
+        nuevaPersona= new Persona(capturaNombre,capturaEmail,capturaTema,capturaComentarios); 
         console.log(nuevaPersona);
         pushDatos()
     
@@ -37,9 +38,8 @@ function enviarFormulario(){
         //probar si funciona el console log y si cambia los campos a blancos
             document.getElementById("capturaNombre").focus();
     }
-    //guardar los datos obtenidos en un array
-    let datos =[];
-    function pushDatos(){
+    //guardar los datos obtenidos en el array datos
+    function pushDatos(nuevaPersona){
         datos.push(nuevaPersona);
         console.log(datos);
         }
