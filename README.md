@@ -1,2 +1,2 @@
 # RECICLADORA-VERGARA-CALVARIO
-Proyecto enfocado en desarrollar el codigo JS de un formulario de contacto para una pagina web.
+Proyecto enfocado en desarrollar el codigo JS de un formulario de contacto.
