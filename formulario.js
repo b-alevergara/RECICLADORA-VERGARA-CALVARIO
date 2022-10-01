@@ -1,4 +1,3 @@
-//evento submit para mandar la info capturada del form e inicio de variables
 let datos =[];
 
 function enviarFormulario(){
@@ -19,9 +18,8 @@ function enviarFormulario(){
     let email=document.getElementById("capturaEmail").value;
     let seleccion=document.getElementById("seleccionTema").value;
     let comentarios=document.getElementById("comentarios").value;
-    //un ciclo para validar que los campos son llenados correctamente
 
-        //revisar que se ejecuten correctamente
+    //un ciclo para validar que todos los campos estan completos
     if(nombre==='' || email==='' || seleccion===''|| comentarios==='' ){  //revisar que estos criterios funcionen
         alert("Asegurese que todos los campos han sido llenados correctamente.");
         document.getElementById("capturaNombre").focus();
@@ -43,7 +41,6 @@ function enviarFormulario(){
         console.log(datos);
         }
     
-//los datos me gustaria enviarlos a mi correo electronico para contactar al cliente(creo que necesito backend para esto)
 }
 }
 
@@ -53,10 +50,8 @@ main()
 //almacenar en local storage los datos del array datos
 localStorage.setItem('contactoCliente', JSON.stringify(datos))
 let contactarCliente = JSON.parse(localStorage.getItem('contactarCliente'))
+console.log(contactarCliente)
 
 
-//puedo a;adir una tabla con los datos ingresados al html con inner html 
-//function tabla(){
-    // nombre.innerHTML=`<h3>Datos ingresados</h3>
-    // <p><strong> Nombre: </strong> ${nombre}</p>`  y asi de cada elemento
-// }
+//utilizar operadores avanzados (puedo desestructurar)
+//incorporar alguna libreria

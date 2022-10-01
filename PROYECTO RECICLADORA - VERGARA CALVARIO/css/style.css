@@ -3,6 +3,10 @@
     box-sizing: border-box;
     font-size: 62.5%;
 }
+.contenedor{
+    height: auto;
+    width: auto;
+}
 .logo img{
     margin: 5px;
     padding: 10px 0;
@@ -33,13 +37,25 @@ nav ul li:hover{
 }
 .seccionUno{
     background-color: rgb(129, 253, 129);
+    height: 6rem;
+    width: 100%;
+    padding: 2rem;
+
 }
 .seccionDos{
     background-color: white;
-
+    height:15rem ;
+    max-height:100% ;
+    width: 100%;
+    padding: 5rem;
+    font-weight: bolder;
 }
 .seccionTres{
     background-color: rgb(129, 253, 129);
+    height: 20rem;
+    width: 100%;
+    padding: 8rem;
+    font-weight: bolder;
 
 }
 .seccionCuatro{
@@ -78,13 +94,18 @@ h2{
 }
 h3{
     display: flex;
+    padding: 3rem;
+    margin-left: 6rem;
     text-transform: capitalize;
     color: rgba(85, 79, 79, 0.89);
     font-size: 9px;
     font-family: 'IBM Plex Serif', serif;
 }
 p{
-    font-size: 5px;
+
+    font-size: 12px;
     font-family: 'Roboto Slab', serif;
     text-transform: uppercase;}
-    
+
+.form-group{
+}
