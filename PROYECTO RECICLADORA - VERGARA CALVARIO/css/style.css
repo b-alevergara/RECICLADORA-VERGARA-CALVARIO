@@ -35,6 +35,15 @@ nav ul li{
 nav ul li:hover{
     background-color: green;
 }
+.opcion{
+    font-size: 1.5rem;
+}
+#botonEnviar{
+    height: auto;
+    width: auto;
+    font-size: small;
+    margin-left: 2rem;
+}
 .seccionUno{
     background-color: rgb(129, 253, 129);
     height: 6rem;

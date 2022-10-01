@@ -4,7 +4,14 @@ function enviarFormulario(){
     const enviar=document.getElementById("botonEnviar")
     enviar.addEventListener("click", (evento)=>{
         evento.preventDefault(); 
-        console.log('Enviado')
+    enviar.onclick= mostrarAlert
+
+    function mostrarAlert(){ //revisar que funcione
+        swal.fire({
+            icon:"success",
+            title: "Formulario enviado"
+        })
+    }
         class Persona {
             constructor(nombre, email, tema, comentarios) {
                 this.nombre = nombre;
@@ -17,11 +24,24 @@ function enviarFormulario(){
     let nombre=document.getElementById("capturaNombre").value;
     let email=document.getElementById("capturaEmail").value;
     let seleccion=document.getElementById("seleccionTema").value;
-    let comentarios=document.getElementById("comentarios").value;
+    // let comentarios=document.getElementById("comentarios").value;
 
-    //un ciclo para validar que todos los campos estan completos
-    if(nombre==='' || email==='' || seleccion===''|| comentarios==='' ){  //revisar que estos criterios funcionen
-        alert("Asegurese que todos los campos han sido llenados correctamente.");
+    const comentarios=document.getElementById("comentarios")
+    comentarios.onclick= comentario
+//sustituir la textarea en html por un boton de comentarios
+//funcion del boton para abrir el alert con textarea y boton ok para confirmar
+    const { value: comentario } = await Swal.fire({
+        input: 'text-area',
+        inputLabel: 'Mensaje',
+        inputPlaceholder: 'Escribe tus comentarios, preguntas y/o solicitudes aqui'
+    })
+    if (comentario) {
+        Swal.fire(`Texto ingresado: ${comentario}`)
+    }
+
+    //un ciclo para validar que todos los campos escenciales estan completos
+    if(nombre==='' || email==='' || seleccion==='' ){  
+        alert("Asegurese que todos los campos han sido llenados correctamente.");//este alert podria llevar sweetalert
         document.getElementById("capturaNombre").focus();
     }else{
     //imprimo en consola los campos que el usuario llena y despues los dejo en blanco para volver a iniciar el formulario
@@ -51,7 +71,3 @@ main()
 localStorage.setItem('contactoCliente', JSON.stringify(datos))
 let contactarCliente = JSON.parse(localStorage.getItem('contactarCliente'))
 console.log(contactarCliente)
-
-
-//utilizar operadores avanzados (puedo desestructurar)
-//incorporar alguna libreria
