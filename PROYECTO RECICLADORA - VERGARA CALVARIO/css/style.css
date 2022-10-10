@@ -97,7 +97,7 @@ h1{
 }
 h2{
     display: flex;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 9px;
     font-family: 'Playfair Display', serif;
 }
@@ -108,13 +108,13 @@ h3{
     text-transform: capitalize;
     color: rgba(85, 79, 79, 0.89);
     font-size: 9px;
-    font-family: 'IBM Plex Serif', serif;
+    font-family: 'Roboto Slab', serif;
 }
 p{
 
     font-size: 12px;
     font-family: 'Roboto Slab', serif;
-    text-transform: uppercase;}
+    text-transform: capitalize;}
 
 .form-group{
 }

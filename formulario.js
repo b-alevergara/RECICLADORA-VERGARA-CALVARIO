@@ -41,7 +41,7 @@ function enviarFormulario(){
 
     //un ciclo para validar que todos los campos escenciales estan completos
     if(nombre==='' || email==='' || seleccion==='' ){  
-        alert("Asegurese que todos los campos han sido llenados correctamente.");//este alert podria llevar sweetalert
+        alert("Asegurese que todos los campos han sido llenados correctamente.");
         document.getElementById("capturaNombre").focus();
     }else{
     //imprimo en consola los campos que el usuario llena y despues los dejo en blanco para volver a iniciar el formulario
@@ -52,7 +52,7 @@ function enviarFormulario(){
             document.getElementById("capturaNombre").value=""
             document.getElementById("capturaEmail").value=""
             document.getElementById("seleccionTema").value=""
-            document.getElementById("comentarios").value=""
+            document.getElementById("comentarios").value=""  //que pasaria con este? poque ya lo cambie por un boton, lo ingresado en el alert a donde va?
             document.getElementById("capturaNombre").focus();
     }
     //guardar los datos obtenidos en el array datos
