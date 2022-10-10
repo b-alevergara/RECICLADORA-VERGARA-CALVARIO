@@ -1,3 +1,4 @@
+//me falta revisar en que parte me falta declarar con let o const
 let datos =[];
 
 function enviarFormulario(){
@@ -6,7 +7,7 @@ function enviarFormulario(){
         evento.preventDefault(); 
     enviar.onclick= mostrarAlert
 
-    function mostrarAlert(){ //revisar que funcione
+    function mostrarAlert(){ //el sawl con await debe estar dentro de una función async
         swal.fire({
             icon:"success",
             title: "Formulario enviado"
@@ -71,3 +72,5 @@ main()
 localStorage.setItem('contactoCliente', JSON.stringify(datos))
 let contactarCliente = JSON.parse(localStorage.getItem('contactarCliente'))
 console.log(contactarCliente)
+
+//crear una tabla a partir de los datos obtenidos
