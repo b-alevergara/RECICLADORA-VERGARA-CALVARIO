@@ -7,7 +7,7 @@ function enviarFormulario(){
         evento.preventDefault(); 
     enviar.onclick= mostrarAlert
 
-    function mostrarAlert(){ //el sawl con await debe estar dentro de una función async
+    function mostrarAlert(){ //el swal con await debe estar dentro de una función async
         swal.fire({
             icon:"success",
             title: "Formulario enviado"

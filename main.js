@@ -14,12 +14,6 @@ const Productos = [
     unidadDeMedida: "Kilo",
     },
 {
-    numero: 3,
-    nombre: "Alambre de acero reciclado",
-    precio: "$ 300",
-    unidadDeMedida: "Kilo",
-    },
-{
     numero: 4,
     nombre: "Caucho reciclado de 6 pulgadas",
     precio: "$ 350",
