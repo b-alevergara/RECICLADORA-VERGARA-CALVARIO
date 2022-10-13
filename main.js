@@ -1,41 +1,31 @@
-//objeto de productos 
-
-const Productos = [
-{
-    numero: 1,
-    nombre: "Caucho granulado", 
-    precio: "$ 450",
-    unidadDeMedida: "Kilo",
-    }, 
-{
-    numero: 2,
-    nombre: "Caucho pulverizado",
-    precio: "$ 650",
-    unidadDeMedida: "Kilo",
-    },
-{
-    numero: 4,
-    nombre: "Caucho reciclado de 6 pulgadas",
-    precio: "$ 350",
-    unidadDeMedida: "Kilo",
-    }
-]
-
-const contenedorProductos = document.getElementById("contenedorProductos"); //el elemento esta en productos.html linea 52
-
-for (const producto of Productos) {
-    let column = document.createElement("div");
-        column.className = "col-md-8 mt-4 "; 
-        column.numero = `columna-${producto.numero}`;
+function prods(){
+    const contenedorProductos = document.getElementById("contenedorProductos");
+    contenedorProductos.innerHTML = "";
+    //este "productos" era mi array que cambie por el archivo json, no se como sustituir para que tome los productos del json
+    productos.forEach((producto) => {
+        let column = document.createElement("div");
+        column.className = "col-md-8 mt-4 ";
+        column.id = `columna-${producto.id}`;
         column.innerHTML = `
-            <div class="card">
+                <div class="card">
                 <div class="card-body">
                     <p class="card-text">Nombre: <b>${producto.nombre}</b></p>
                     <p class="card-text">Precio: <b>${producto.precio}</b></p>
                     <p class="card-text">Unidad de medida: <b>${producto.unidadDeMedida}</b></p>
                 </div>
-            </div>`;
-contenedorProductos.append(column);}
+                </div>`;
+});
+        contenedorProductos.append(column);
+}
+
+    async function llamarProductos(){
+        const response = await fetch("./json/productos.json");
+        const nombre = await response.json();
+        console.log(nombre);
+        prods()
+    }
+    //aqui no estoy segura si es obligatorio usar el catch(Error)
 
 
-
+    prods()
+    llamarProductos()

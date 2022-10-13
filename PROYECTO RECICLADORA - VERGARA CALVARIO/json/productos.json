@@ -1,0 +1,18 @@
+[
+    {"id":1,
+    "nombre":"Caucho Granulado", 
+    "precio": "$ 450", 
+    "unidadDeMedida":"Kg"
+    },
+    {"id":2,
+    "nombre":"Caucho Pulverizado ", 
+    "precio": "$ 650", 
+    "unidadDeMedida":"Kg"
+    },
+    {"id":3,
+    "nombre":"Caucho  Reciclado De 6 Pulgadas", 
+    "precio": "$ 350", 
+    "unidadDeMedida":"Kg"
+    }
+    
+]

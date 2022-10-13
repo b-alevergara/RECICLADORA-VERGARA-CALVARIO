@@ -25,20 +25,18 @@ function enviarFormulario(){
     let nombre=document.getElementById("capturaNombre").value;
     let email=document.getElementById("capturaEmail").value;
     let seleccion=document.getElementById("seleccionTema").value;
-    // let comentarios=document.getElementById("comentarios").value;
+    let comentarios=document.getElementById("comentarios").value;
 
-    const comentarios=document.getElementById("comentarios")
-    comentarios.onclick= comentario
-//sustituir la textarea en html por un boton de comentarios
-//funcion del boton para abrir el alert con textarea y boton ok para confirmar
-    const { value: comentario } = await Swal.fire({
-        input: 'text-area',
-        inputLabel: 'Mensaje',
-        inputPlaceholder: 'Escribe tus comentarios, preguntas y/o solicitudes aqui'
-    })
-    if (comentario) {
-        Swal.fire(`Texto ingresado: ${comentario}`)
-    }
+    function comments(comentario){//se supone que debia meter mi swal en una funcion porque necesita await
+        Swal.fire({
+            input: 'text-area',
+            inputLabel: 'Mensaje',
+            inputPlaceholder: 'Escribe tus comentarios, preguntas y/o solicitudes aqui'
+        })
+        if (comentario) {
+            Swal.fire(`Texto ingresado: ${comentario}`)
+        }
+        }
 
     //un ciclo para validar que todos los campos escenciales estan completos
     if(nombre==='' || email==='' || seleccion==='' ){  
@@ -73,4 +71,5 @@ localStorage.setItem('contactoCliente', JSON.stringify(datos))
 let contactarCliente = JSON.parse(localStorage.getItem('contactarCliente'))
 console.log(contactarCliente)
 
-//crear una tabla a partir de los datos obtenidos
+//aqui voy a crear una tabla a partir de los datos obtenidos
+//con los valores nombre, email
