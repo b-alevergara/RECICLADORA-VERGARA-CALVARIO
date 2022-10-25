@@ -1,5 +1,12 @@
 let productos = []
 
+{
+    id: 1,
+    nombre: 
+    precio: $ ,
+    unidadDeMedida: kg , 
+}
+
 //regresar a tener el for each
 
 function prods(){

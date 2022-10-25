@@ -1,4 +1,3 @@
-//me falta revisar en que parte me falta declarar con let o const
 let datos =[];
 
 function enviarFormulario(){
@@ -36,7 +35,7 @@ function enviarFormulario(){
         if (comentario) {
             Swal.fire(`Texto ingresado: ${comentario}`)
         }
-        }
+        }//revisar que esto funcione o modificar la funcion del swal
 
     //un ciclo para validar que todos los campos escenciales estan completos
     if(nombre==='' || email==='' || seleccion==='' ){  
