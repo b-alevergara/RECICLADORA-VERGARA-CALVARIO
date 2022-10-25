@@ -1,3 +1,7 @@
+let productos = []
+
+//regresar a tener el for each
+
 function prods(){
     const contenedorProductos = document.getElementById("contenedorProductos");
     contenedorProductos.innerHTML = "";
